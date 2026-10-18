@@ -14,10 +14,12 @@ Upload the contents of this folder to the root of a GitHub repository. In Settin
 - assets/: original studio announcement artwork and favicon.
 
 ## Content and photography
-The service categories (hair, facials, nails), Y|H name and coming-soon status are based on @yassmeenhamadi_ on Instagram. Original announcement artwork was removed at the owner’s request and is not included in this repository.
+The service categories (hair, facials, nails) and Y|H name are based on @yassmeenhamadi_ on Instagram. Original announcement artwork was removed at the owner’s request and is not included in this repository.
 
 Editorial photograph: Jakob Owens, https://unsplash.com/photos/lwTzL-QwhQA — Unsplash License, https://unsplash.com/license. This is labeled inspiration imagery and is not represented as studio client work. Replace it with approved original studio/client photographs when available.
 
-Confirm the full menu, prices, address, opening date and booking method with Yassmeen before adding these details. No invented testimonials, client results or availability are included.
+Confirm the full menu, prices, address and booking method with Yassmeen before adding these details. No invented testimonials, client results or availability are included.
 
 The inquiry builder copies a message locally. It does not send messages, collect customer information or reserve appointments. Instagram is the contact destination. Fonts load from Google Fonts with local fallbacks.
+
+Additional editorial photos: cottonbro studio (https://www.pexels.com/photo/3993470/) and SHVETS production (https://www.pexels.com/photo/9774659/), under the Pexels license. The Lane Salon was a visual reference for restrained colors, spacing and navigation; its photographs, copy and branding were not reused.
