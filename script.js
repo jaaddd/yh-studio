@@ -1,0 +1,12 @@
+const menu=document.querySelector('.menu-toggle');
+const navigation=document.querySelector('#navigation');
+menu.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(open));navigation.classList.toggle('open',open);});
+navigation.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.setAttribute('aria-expanded','false');navigation.classList.remove('open');}));
+document.addEventListener('keydown',event=>{if(event.key==='Escape'&&navigation.classList.contains('open')){menu.setAttribute('aria-expanded','false');navigation.classList.remove('open');menu.focus();}});
+const interest=document.querySelector('#interest'),message=document.querySelector('#message'),status=document.querySelector('#copy-status');
+const messages={'Hair':'Hi Yassmeen! I’d love to learn more about your hair services. Could you share the options, pricing and upcoming availability?','Facials':'Hi Yassmeen! I’m interested in your facial services. Could you share the options, pricing and upcoming availability?','Nails / Gel X':'Hi Yassmeen! I’d love to learn more about nails and Gel X at the studio. Could you share the options, pricing and upcoming availability?','Opening updates':'Hi Yassmeen! I’m excited about the new chapter of Y|H. Could you share the latest opening and booking details?','Something else':'Hi Yassmeen! I’d love to ask you about the studio. '};
+function updateMessage(){message.value=messages[interest.value];status.textContent='Then open Instagram and paste it into your message.';}
+interest.addEventListener('change',updateMessage);
+document.querySelectorAll('[data-service]').forEach(button=>button.addEventListener('click',()=>{interest.value=button.dataset.service;updateMessage();document.querySelector('#connect').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});interest.focus({preventScroll:true});}));
+document.querySelector('#copy').addEventListener('click',async()=>{try{if(!message.value.trim()){status.textContent='Write a message first, then copy it.';message.focus();return;}await navigator.clipboard.writeText(message.value);status.textContent='Copied! Open Instagram and paste your message to Yassmeen.';}catch{message.focus();message.select();status.textContent='Select and copy the message above, then paste it into Instagram.';}});
+document.querySelector('#year').textContent=new Date().getFullYear();
