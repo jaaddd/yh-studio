@@ -10,3 +10,24 @@ interest.addEventListener('change',updateMessage);
 document.querySelectorAll('[data-service]').forEach(button=>button.addEventListener('click',()=>{interest.value=button.dataset.service;updateMessage();document.querySelector('#connect').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});interest.focus({preventScroll:true});}));
 document.querySelector('#copy').addEventListener('click',async()=>{try{if(!message.value.trim()){status.textContent='Write a message first, then copy it.';message.focus();return;}await navigator.clipboard.writeText(message.value);status.textContent='Copied! Open Instagram and paste your message to Yassmeen.';}catch{message.focus();message.select();status.textContent='Select and copy the message above, then paste it into Instagram.';}});
 document.querySelector('#year').textContent=new Date().getFullYear();
+
+// Motion enhances the page; all content remains visible without JavaScript.
+const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)');
+const progress=document.createElement('div');
+progress.className='reading-progress';progress.setAttribute('aria-hidden','true');document.body.append(progress);
+let progressFrame=0;
+function updateProgress(){progressFrame=0;const distance=document.documentElement.scrollHeight-innerHeight;progress.style.transform=`scaleX(${distance>0?Math.min(1,Math.max(0,scrollY/distance)):0})`;document.querySelector('header').classList.toggle('scrolled',scrollY>15);}
+addEventListener('scroll',()=>{if(!progressFrame)progressFrame=requestAnimationFrame(updateProgress);},{passive:true});
+addEventListener('resize',updateProgress);updateProgress();
+let reveals;
+function configureMotion(){
+ if(reveals)reveals.disconnect();
+ document.querySelectorAll('.reveal-wait').forEach(el=>el.classList.remove('reveal-wait'));
+ if(reducedMotion.matches||!('IntersectionObserver' in window))return;
+ reveals=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.remove('reveal-wait');entry.target.classList.add('revealed');reveals.unobserve(entry.target);}}),{threshold:.08,rootMargin:'0px 0px -20px 0px'});
+ document.querySelectorAll('.section-head,.service-list article,.story-image,.story-copy,.inspiration-grid figure,.connect>div,.questions').forEach((el,index)=>{
+  el.classList.add('reveal');el.style.setProperty('--reveal-delay',`${index%3*65}ms`);
+  if(el.getBoundingClientRect().top>innerHeight){el.classList.add('reveal-wait');reveals.observe(el);}
+ });
+}
+configureMotion();reducedMotion.addEventListener('change',configureMotion);
