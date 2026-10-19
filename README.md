@@ -1,25 +1,27 @@
-# Y|H — Yassmeen Hamadi
-A responsive, static studio website. No build, database or paid hosting required.
+# Y|H Studio
+Responsive static marketing website for Yassmeen Hamadi. Live: https://jaaddd.github.io/yh-studio/
 
-## Preview
-Serve this folder with any static web server, or open index.html.
+## Features
+- Three interactive service panels.
+- Two-question service finder with a planner handoff.
+- Filterable inspiration board, image lightbox and favorites saved in localStorage.
+- Visit planner with multiple services, optional name/date/notes, validation, editable inquiry and clipboard action.
+- Instagram contact handoff; no messages sent automatically and no booking calendar or payment processing.
+- Mobile navigation, native accessible dialogs, reduced-motion support and subtle animation.
 
-## GitHub Pages
-Upload the contents of this folder to the root of a GitHub repository. In Settings → Pages select Deploy from a branch, main, / (root). GitHub provides an address at https://USERNAME.github.io/REPOSITORY/. A custom domain can be added later.
+## Editing and hosting
+Edit index.html (content), style.css (design), script.js (service content and behavior), and assets/ (images). No build or dependencies needed. GitHub Pages deploys the root of main. A custom domain can be added later.
 
-## Editing
-- index.html: page content, Instagram links, service categories and FAQs.
-- style.css: palette, typography and responsive layout.
-- script.js: navigation and inquiry message templates.
-- assets/: original studio announcement artwork and favicon.
+## Data
+Only saved inspiration IDs persist in browser storage. Personal inquiry text is kept in page memory and is not stored or transmitted by this site. Clipboard copying occurs only on visitor action. The visitor must send the inquiry through Instagram. Preferred dates are not reserved times. Service finder results are a preference-based conversation starter, not clinical recommendations.
 
-## Content and photography
-The service categories (hair, facials, nails) and Y|H name are based on @yassmeenhamadi_ on Instagram. Original announcement artwork was removed at the owner’s request and is not included in this repository.
+## Content and imagery
+Verified categories: hair, facials and nails, based on the Instagram profile supplied by the owner. Full menu, pricing, address, hours, availability and booking system still require studio details. No invented testimonials or results are shown.
 
-Editorial photograph: Jakob Owens, https://unsplash.com/photos/lwTzL-QwhQA — Unsplash License, https://unsplash.com/license. This is labeled inspiration imagery and is not represented as studio client work. Replace it with approved original studio/client photographs when available.
+Editorial reference photographs, labeled as inspiration rather than studio work:
+- cottonbro studio: https://www.pexels.com/photo/3993470/
+- SHVETS production: https://www.pexels.com/photo/9774659/
+- Jakob Owens: https://unsplash.com/photos/lwTzL-QwhQA
+Pexels and Unsplash licenses apply. Original Instagram announcement artwork is not included.
 
-Confirm the full menu, prices, address and booking method with Yassmeen before adding these details. No invented testimonials, client results or availability are included.
-
-The inquiry builder copies a message locally. It does not send messages, collect customer information or reserve appointments. Instagram is the contact destination. Fonts load from Google Fonts with local fallbacks.
-
-Additional editorial photos: cottonbro studio (https://www.pexels.com/photo/3993470/) and SHVETS production (https://www.pexels.com/photo/9774659/), under the Pexels license. The Lane Salon was a visual reference for restrained colors, spacing and navigation; its photographs, copy and branding were not reused.
+Design is an original plum-and-blush identity. Broader marketing research included Heyday and Glowbar for service discovery and calls to action; their layouts, images, copy, treatments, prices and claims were not reused.
