@@ -26,4 +26,6 @@ Pexels and Unsplash licenses apply. Original Instagram announcement artwork is n
 
 Design is an original plum-and-blush identity. Broader marketing research included Heyday and Glowbar for service discovery and calls to action; their layouts, images, copy, treatments, prices and claims were not reused.
 
-Hero portrait: Jonathan Borba / Pexels, https://www.pexels.com/photo/5488912/ (Pexels license). Editorial reference, not a studio client.
+Hero portrait: Macedo Fotografo / Pexels, https://www.pexels.com/photo/10883300/ (Pexels license). Editorial reference, not a studio client.
+
+Saved-idea functionality has been removed. The gallery supports category filters and image previews only; the inquiry planner does not store visitor data.
