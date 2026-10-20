@@ -24,3 +24,5 @@
 
 /* Keep the entire finder panel centered, including wide screens. */
 .finder-banner{width:86%;max-width:1500px;margin-left:auto;margin-right:auto}
+
+.finder-banner{margin-bottom:90px}@media(max-width:720px){.finder-banner{margin-bottom:60px}}
