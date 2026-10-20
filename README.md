@@ -25,3 +25,5 @@ Editorial reference photographs, labeled as inspiration rather than studio work:
 Pexels and Unsplash licenses apply. Original Instagram announcement artwork is not included.
 
 Design is an original plum-and-blush identity. Broader marketing research included Heyday and Glowbar for service discovery and calls to action; their layouts, images, copy, treatments, prices and claims were not reused.
+
+Hero portrait: Jonathan Borba / Pexels, https://www.pexels.com/photo/5488912/ (Pexels license). Editorial reference, not a studio client.
