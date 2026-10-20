@@ -21,3 +21,6 @@
 
 /* Centered service finder and updated portrait framing. */
 .finder-banner{flex-direction:column;text-align:center;justify-content:center;gap:28px}.finder-banner .pill{margin:0;align-self:center}.finder-banner>div{width:100%}.finder-banner h2{margin:15px auto}.hero-photo{object-position:center 48%}@media(max-width:720px){.finder-banner{gap:24px}.finder-banner .pill{align-self:center;margin:0}.hero-photo{object-position:center 43%}}
+
+/* Keep the entire finder panel centered, including wide screens. */
+.finder-banner{width:86%;max-width:1500px;margin-left:auto;margin-right:auto}
